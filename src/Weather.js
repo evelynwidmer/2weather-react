@@ -64,17 +64,17 @@ export default function Weather() {
             <li>Wind: {weatherData.wind}km/h</li>
           </ul>
         </div>
-        <footer>
-          This project was coded by Evelyn Widmer and is{" "}
-          <a
-            href="https://github.com/evelynwidmer/2weather-react"
-            target="_blank"
-            rel="noreferrer"
-          >
-            open-sourced on GitHub
-          </a>
-        </footer>
       </div>
+      <footer>
+        This project was coded by Evelyn Widmer and is{" "}
+        <a
+          href="https://github.com/evelynwidmer/2weather-react"
+          target="_blank"
+          rel="noreferrer"
+        >
+          open-sourced on GitHub
+        </a>
+      </footer>
     </div>
   );
 }
