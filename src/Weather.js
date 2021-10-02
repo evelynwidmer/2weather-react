@@ -20,7 +20,7 @@ export default function Weather() {
             <input
               type="search"
               placeholder="Type a city.."
-              autofocus="on"
+              autoFocus="on"
               autoComplete="off"
               className="form-control shadow-sm"
             />
@@ -29,7 +29,7 @@ export default function Weather() {
             <input
               type="submit"
               value="Search"
-              class="form-control btn btn-primary shadow-sm w-100"
+              className="form-control btn btn-primary shadow-sm w-100"
             />
           </div>
           <div className="col-3">
@@ -48,7 +48,7 @@ export default function Weather() {
             <img
               src={weatherData.imgUrl}
               alt={weatherData.description}
-              class="float-left"
+              className="float-left"
             />
             <div className="float-left">
               <strong>{weatherData.temperature}</strong>
@@ -70,6 +70,7 @@ export default function Weather() {
         <a
           href="https://github.com/evelynwidmer/2weather-react"
           target="_blank"
+          rel="noreferrer"
         >
           open-sourced on GitHub
         </a>
