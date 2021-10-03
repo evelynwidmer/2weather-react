@@ -66,8 +66,7 @@ export default function Weather() {
         </div>
       </div>
     </div>
-  );
-  <footer>
+      <footer>
     This project was coded by Evelyn Widmer and is{" "}
     <a
       href="https://github.com/evelynwidmer/2weather-react"
@@ -76,5 +75,6 @@ export default function Weather() {
     >
       open-sourced on GitHub
     </a>
-  </footer>;
+  </footer>
+  );
 }
