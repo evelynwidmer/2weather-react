@@ -65,6 +65,15 @@ li:first-letter {
   text-align: center;
 }
 
+.Weather .unit {
+  color: rgb(33, 33, 33);
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  line-height: 1;
+  top: -34px;
+}
+
 i {
   position: relative;
   font-size: 50px;
