@@ -99,6 +99,7 @@ setCity(event.target.value);
         </div>
         <WeatherInfo data={weatherData} />
       </div>
+      </div>
 
     );
   } else {
