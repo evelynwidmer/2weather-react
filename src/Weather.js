@@ -69,7 +69,7 @@ setCity(event.target.value);
         <h1>{weatherData.city}</h1>
         <ul>
           <li>
-            <FormattedDate date={weatherData.date} /}
+            <FormattedDate date={weatherData.date} />
             </li>
           <li className="text-capitalize">{weatherData.description}</li>
         </ul>
