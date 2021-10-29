@@ -1,5 +1,5 @@
 import axios from "axios";
-import WeatherInfo from "./WeatherInfo";
+import WeatherInfo from "./Weatherinfo";
 import React, { useState } from "react";
 import "./Weather.css";
 
@@ -20,23 +20,20 @@ export default function Weather(props) {
     });
   }
 
-function search() {
-
-   const apiKey = "38cea223891d0c90e86cb4b3203b1b50";
+  function search() {
+    const apiKey = "38cea223891d0c90e86cb4b3203b1b50";
     let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
-}
+  }
 
-function handleSubmit(event) {
-  event.preventDefault();
-  search();
-  
-}
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
 
-function handleCityChange(event) {
-setCity(event.target.value);
-
-}
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
 
   if (weatherData.ready) {
     return (
@@ -65,45 +62,11 @@ setCity(event.target.value);
             </div>
           </div>
         </form>
-        <WeatherInfo>
-        <h1>{weatherData.city}</h1>
-        <ul>
-          <li>
-            <FormattedDate date={weatherData.date} />
-            </li>
-          <li className="text-capitalize">{weatherData.description}</li>
-        </ul>
-        <div className="row">
-          <div className="col-6">
-            <div className="clearfix weather-temperature">
-              <img
-                src={weatherData.iconUrl}
-                alt={weatherData.description}
-                className="float-left"
-              />
-              <div className="float-left">
-                <span className="temperature">{Math.round(temperature)}</span>
-                <strong>{weatherData.temperature}</strong>
-                <span className="unit">
-                  <a href="/">°C</a> | <a href="/">°F</a>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div className="col-6">
-            <ul>
-              <li>Humidity: {weatherData.humidity}%</li>
-              <li>Wind: {weatherData.wind}km/h</li>
-            </ul>
-          </div>
-        </div>
         <WeatherInfo data={weatherData} />
       </div>
-      </div>
-
     );
   } else {
-   search();
-return "Loading...";
+    search();
+    return "Loading...";
   }
 }
