@@ -52,7 +52,7 @@ if (index < 5) {
     </div>
 
 
-} else {
+ else {
       load();
 
   return null;
