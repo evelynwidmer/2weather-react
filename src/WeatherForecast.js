@@ -35,7 +35,7 @@ function handleResponse(response) {
   return (
     <div className="WeatherForecast">
       <div className="row">
-          {forecast.map(function(failyForecast, index){
+          {forecast.map(function(dailyForecast, index) {
 if (index < 5) {
               return (
                    <div className="col" key={index}>
@@ -57,6 +57,5 @@ if (index < 5) {
 
   return null;
 
-  );
 }
 }
