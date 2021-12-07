@@ -29,6 +29,11 @@ export default function Weather(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
+  function getCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchLocation);
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
     search();
@@ -37,6 +42,11 @@ export default function Weather(props) {
   function handleCityChange(event) {
     setCity(event.target.value);
   }
+
+  let currentLocationButton = document.querySelector(
+    "#current-location-button"
+  );
+  currentLocationButton.addEventListener("click", getCurrentLocation);
 
   if (weatherData.ready) {
     return (
